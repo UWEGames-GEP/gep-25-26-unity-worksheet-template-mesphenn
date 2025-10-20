@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using static GameManager;
 
 public class Inventory : MonoBehaviour
 {
@@ -23,20 +24,24 @@ public class Inventory : MonoBehaviour
     {
         // find the game manager and reference it
         gameManager = FindAnyObjectByType<GameManager>();
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (gameManager.state == GameState.GAMEPLAY)
         {
-            AddItem("Sword");
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                AddItem("Sword");
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                RemoveItem("Sword");
+            }
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            RemoveItem("Sword");
-        }
+
     }
 
 
