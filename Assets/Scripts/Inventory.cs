@@ -32,14 +32,30 @@ public class Inventory : MonoBehaviour
     {
         if (gameManager.state == GameState.GAMEPLAY)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                AddItem("Sword");
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                RemoveItem("Sword");
-            }
+            //   if (Input.GetKeyDown(KeyCode.Alpha1))
+            //    {
+            //        AddItem("Sword");
+            //    }
+            //    if (Input.GetKeyDown(KeyCode.Alpha2))
+            //    {
+            //        RemoveItem("Sword");
+            //    }
+        }
+      
+    }
+
+    public void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        // if it exists, get the ItemObject component from the hit object
+        ItemObject collisionItem = hit.gameObject.GetComponent<ItemObject>();
+
+        // checking if the object has an ItemObject component
+        if (collisionItem != null)
+        {
+            // adding the item to inventory structure
+            items.Add(collisionItem.name);
+            // destroying the game object
+            Destroy(collisionItem.gameObject);
         }
 
     }
