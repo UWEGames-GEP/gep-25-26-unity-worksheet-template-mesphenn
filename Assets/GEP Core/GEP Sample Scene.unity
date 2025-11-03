@@ -929,7 +929,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c2e40fa84d53ccd428f640eac126b1fb, type: 2}
     - target: {fileID: 5801792875103308785, guid: de439c1803366024bac0eedf369a6aff, type: 3}
       propertyPath: m_Name
-      value: Gold Orb
+      value: generic orb(2)
       objectReference: {fileID: 0}
     - target: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1266,7 +1266,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4f1ef37ae953c484bbc5d5e4049147e5, type: 2}
     - target: {fileID: 5801792875103308785, guid: de439c1803366024bac0eedf369a6aff, type: 3}
       propertyPath: m_Name
-      value: Black Orb
+      value: generic orb(1)
       objectReference: {fileID: 0}
     - target: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1604,7 +1604,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 979aef027a1c86c42a15ce35fce366fa, type: 2}
     - target: {fileID: 5801792875103308785, guid: de439c1803366024bac0eedf369a6aff, type: 3}
       propertyPath: m_Name
-      value: Blue orb
+      value: generic orb
       objectReference: {fileID: 0}
     - target: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
       propertyPath: m_LocalPosition.x
