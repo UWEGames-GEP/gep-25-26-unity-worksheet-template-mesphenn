@@ -16,5 +16,5 @@ MonoBehaviour:
   description: A heavy and sharp long steel sword
   weight: 0
   price: 50
-  amount: 0
+  amount: 1
   damage: 12

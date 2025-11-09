@@ -3229,6 +3229,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8912573260458232164, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: item_data
+      value: 
+      objectReference: {fileID: 11400000, guid: 634dc018e09ca874eb805e2f7f0f204b, type: 2}
+    - target: {fileID: 8912573260458232164, guid: de439c1803366024bac0eedf369a6aff, type: 3}
       propertyPath: item_name
       value: Short sword
       objectReference: {fileID: 0}
@@ -4655,6 +4659,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 83.898
       objectReference: {fileID: 0}
+    - target: {fileID: 8912573260458232164, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: item_data
+      value: 
+      objectReference: {fileID: 11400000, guid: dfda3e69e77002642ba8664fe2e8845b, type: 2}
     - target: {fileID: 8912573260458232164, guid: de439c1803366024bac0eedf369a6aff, type: 3}
       propertyPath: item_name
       value: Poleaxe
@@ -6144,6 +6152,10 @@ PrefabInstance:
       propertyPath: itemname
       value: Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 8912573260458232164, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: item_data
+      value: 
+      objectReference: {fileID: 11400000, guid: 2be7735a060316249ad3e03860c99a34, type: 2}
     - target: {fileID: 8912573260458232164, guid: de439c1803366024bac0eedf369a6aff, type: 3}
       propertyPath: item_name
       value: Long sword

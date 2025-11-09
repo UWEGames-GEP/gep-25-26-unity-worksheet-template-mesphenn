@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c224b6cec8830d4dac37754125f2fe8, type: 3}
   m_Name: DaggerData
   m_EditorClassIdentifier: 
-  item_name: 
-  description: 
+  item_name: Dagger
+  description: A small but deadly dagger
   weight: 0
-  price: 0
-  amount: 0
-  damage: 0
+  price: 14
+  amount: 1
+  damage: 8
