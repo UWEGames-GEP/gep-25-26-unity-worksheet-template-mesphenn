@@ -4,8 +4,17 @@ using static GameManager;
 
 public class Inventory : MonoBehaviour
 {
-    public List<string> items = new List<string>();
-    public GameManager gameManager;
+    [SerializeField] private List<string> items = new List<string>();
+    [SerializeField] private GameManager gameManager;
+
+    // Ability to read inventory items without modifying
+    public IReadOnlyList<string> Items
+    {
+        get
+        {
+            return items;
+        }
+    }
 
     // function to add an item
     public void AddItem(string item_name)
@@ -53,7 +62,7 @@ public class Inventory : MonoBehaviour
         if (collisionItem != null)
         {
             // adding the item to inventory structure
-            items.Add(collisionItem.item_name);
+            AddItem(collisionItem.item_name);
             // destroying the game object
             Destroy(collisionItem.gameObject);
         }
