@@ -14,6 +14,7 @@ public class PlayerInventory : InventorySystem
         audioSource = GetComponent <AudioSource> ();
     }
 
+    // Sound effects
     protected override void IfItemAdded(string itemName)
     {
         audioSource.clip = pickUpClip;
@@ -28,12 +29,16 @@ public class PlayerInventory : InventorySystem
         // checking if the object has an ItemObject component
         if (collisionItem != null)
         {
-            // adding the item to inventory structure
-            AddItem(collisionItem.item_name);
-            // playing sound effect
-            IfItemAdded(collisionItem.item_name);
-            // destroying the game object
-            Destroy(collisionItem.gameObject);
+            ItemData data = collisionItem.ItemData;
+            if (data != null)
+            {
+                // adding the item to inventory structure
+                AddItem(data.ItemName);
+                // playing sound effect
+                IfItemAdded(data.ItemName);
+                // destroying the game object
+                Destroy(collisionItem.gameObject);
+            }
         }
 
     }
