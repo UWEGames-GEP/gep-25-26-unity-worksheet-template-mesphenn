@@ -59,6 +59,7 @@ Material:
     - _BumpScale: 1
     - _Glossiness: 0.5
     - _Parallax: 0.02
+    - _UseColorMap: 0
     m_Colors:
     - _BaseColor: {r: 0.20754719, g: 0.15781417, b: 0.15781417, a: 1}
     - _Color: {r: 0.20754716, g: 0.15781415, b: 0.15781415, a: 1}
