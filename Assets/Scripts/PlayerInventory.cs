@@ -4,11 +4,20 @@ using static GameManager;
 public class PlayerInventory : InventorySystem
 {
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private AudioClip pickUpClip;
+
+    private AudioSource audioSource;
 
     void Start()
     {
         gameManager = FindAnyObjectByType<GameManager>();
+        audioSource = GetComponent <AudioSource> ();
+    }
 
+    protected override void IfItemAdded(string itemName)
+    {
+        audioSource.clip = pickUpClip;
+        audioSource.Play () ;
     }
 
     public void OnControllerColliderHit(ControllerColliderHit hit)
@@ -21,6 +30,8 @@ public class PlayerInventory : InventorySystem
         {
             // adding the item to inventory structure
             AddItem(collisionItem.item_name);
+            // playing sound effect
+            IfItemAdded(collisionItem.item_name);
             // destroying the game object
             Destroy(collisionItem.gameObject);
         }
@@ -28,3 +39,4 @@ public class PlayerInventory : InventorySystem
     }
 
 }
+  

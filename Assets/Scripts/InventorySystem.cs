@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 
 // This is the base class inventory for other inventories to use its logic
-public class InventorySystem : MonoBehaviour
+public abstract class InventorySystem : MonoBehaviour
 {
     [SerializeField] private List<string> items = new List<string>();
 
@@ -26,4 +26,6 @@ public class InventorySystem : MonoBehaviour
     {
         items.Remove(item_name);
     }
+
+    protected abstract void IfItemAdded(string item_name);
 }
