@@ -13,6 +13,23 @@ public class GameManager : MonoBehaviour
     public GameState state;
     public bool has_changed_state = false;
 
+    public void pausing()
+    {
+        switch (state)
+        {
+            case GameState.GAMEPLAY:
+                state = GameState.PAUSE;
+                has_changed_state = true;
+                break;
+            case GameState.PAUSE:
+                state = GameState.GAMEPLAY;
+                has_changed_state = true;
+                break;
+            default:
+                break;
+        }
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,28 +39,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (state)
-        {
-            // Checks the game state we are in
-            case GameState.GAMEPLAY:
-                // Toggle pause over the return key
-                if (Input.GetKeyDown(KeyCode.Return))
-                {
-                    state = GameState.PAUSE;
-                    has_changed_state = true;
-                }
-                break;
-            case GameState.PAUSE:
-                // Toggle play over the return key
-                if (Input.GetKeyDown(KeyCode.Return))
-                {
-                    state = GameState.GAMEPLAY;
-                    has_changed_state = true;
-                }
-                break;
-            default:
-                break;
-        }
+        
     }
 
     private void LateUpdate()
