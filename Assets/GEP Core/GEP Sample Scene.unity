@@ -2302,8 +2302,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
   m_PrefabInstance: {fileID: 1721809386}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &1024405021
-CapsuleCollider:
+--- !u!65 &1024405025
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2320,11 +2320,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.08913964
-  m_Height: 1.7540065
-  m_Direction: 1
-  m_Center: {x: -0.07302342, y: 0.35953516, z: 0}
+  serializedVersion: 3
+  m_Size: {x: 0.17827961, y: 1.754007, z: 0.037219}
+  m_Center: {x: -0.0730235, y: 0.35953525, z: -0.00000009105207}
 --- !u!1 &1024905206
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,7 +3241,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5801792875103308785, guid: de439c1803366024bac0eedf369a6aff, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1394149171}
+      addedObject: {fileID: 1394149175}
   m_SourcePrefab: {fileID: 100100000, guid: de439c1803366024bac0eedf369a6aff, type: 3}
 --- !u!4 &1190701459 stripped
 Transform:
@@ -3600,8 +3598,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
   m_PrefabInstance: {fileID: 1161068999}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &1394149171
-CapsuleCollider:
+--- !u!65 &1394149175
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3618,11 +3616,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.036602814
-  m_Height: 0.5416199
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.19620967, z: 0}
+  serializedVersion: 3
+  m_Size: {x: 0.07320574, y: 0.54162, z: 0.04591217}
+  m_Center: {x: -0.000000029237519, y: 0.19620971, z: 0.00000025778843}
 --- !u!4 &1406737875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 850649989193942044, guid: ae358aa425fe140409d8a560f4492730, type: 3}
@@ -4445,8 +4441,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5801792875103308785, guid: de439c1803366024bac0eedf369a6aff, type: 3}
   m_PrefabInstance: {fileID: 1918649226397181239}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &1671563040
-CapsuleCollider:
+--- !u!65 &1671563044
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4463,11 +4459,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.17671856
-  m_Height: 1.4313934
-  m_Direction: 1
-  m_Center: {x: -0.00000024586916, y: 0.5350343, z: 0}
+  serializedVersion: 3
+  m_Size: {x: 0.35343713, y: 1.4313934, z: 0.06279871}
+  m_Center: {x: -0.00000018626451, y: 0.5350343, z: 0}
 --- !u!1001 &1676338649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4674,7 +4668,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5801792875103308785, guid: de439c1803366024bac0eedf369a6aff, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1024405021}
+      addedObject: {fileID: 1024405025}
   m_SourcePrefab: {fileID: 100100000, guid: de439c1803366024bac0eedf369a6aff, type: 3}
 --- !u!1001 &1733427043
 PrefabInstance:
@@ -6167,7 +6161,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5801792875103308785, guid: de439c1803366024bac0eedf369a6aff, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1671563040}
+      addedObject: {fileID: 1671563044}
   m_SourcePrefab: {fileID: 100100000, guid: de439c1803366024bac0eedf369a6aff, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
