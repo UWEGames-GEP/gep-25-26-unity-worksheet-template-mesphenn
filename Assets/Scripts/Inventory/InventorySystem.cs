@@ -4,7 +4,7 @@ using System.Collections.Generic;
 // This is the base class inventory for other inventories to use its logic
 public abstract class InventorySystem : MonoBehaviour
 {
-    [SerializeField] private List<ItemObject> items = new List<ItemObject>();
+    [SerializeField] private List<ItemData> items = new List<ItemData>();
     [SerializeField] private GameManager gameManager;
     [SerializeField] Transform worldItemsTransform;
 
@@ -15,7 +15,7 @@ public abstract class InventorySystem : MonoBehaviour
     }
 
     // Ability to read inventory items without modifying
-    public IReadOnlyList<ItemObject> Items
+    public IReadOnlyList<ItemData> Items
     {
         get
         {
@@ -24,13 +24,13 @@ public abstract class InventorySystem : MonoBehaviour
     }
 
     // function to add item
-    public virtual void AddItem(ItemObject item_name)
+    public virtual void AddItem(ItemData item_name)
     {
         items.Add(item_name);
     }
 
     // function to remove item
-    public virtual void RemoveItem(ItemObject item_name)
+    public virtual void RemoveItem(ItemData item_name)
     {
         items.Remove(item_name);
     }
@@ -41,7 +41,7 @@ public abstract class InventorySystem : MonoBehaviour
         if (gameManager.state == GameManager.GameState.GAMEPLAY && items.Count > 0)
         {
             // Store the item at the top of the list as a variable
-            ItemObject item = items[0];
+            ItemData item = items[0];
 
             // Get the properties for where we want to spawn
             Vector3 currentPosition = transform.position;
@@ -54,12 +54,12 @@ public abstract class InventorySystem : MonoBehaviour
             Quaternion newRotation = currentRotation * Quaternion.Euler(0, 0, 180);
 
             // Instantiate a copy of the held item
-            GameObject newItem = Instantiate(item.gameObject, newPosition, newRotation, worldItemsTransform);
+            GameObject newItem = Instantiate(item.prefab_game_object, newPosition, newRotation, worldItemsTransform);
             newItem.SetActive(true);
 
             // Clean up exisiting item
             items.Remove(item);
-            Destroy(item.gameObject);
+            //Destroy(item.gameObject);
 
         }
     }

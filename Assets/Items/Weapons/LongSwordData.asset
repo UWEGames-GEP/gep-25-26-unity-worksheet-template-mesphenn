@@ -17,4 +17,5 @@ MonoBehaviour:
   weight: 0
   price: 50
   amount: 1
+  prefab_gameObject: {fileID: 7864984475164273002, guid: 163127946bb63ee4b99d7bc9bc5fd13e, type: 3}
   damage: 12

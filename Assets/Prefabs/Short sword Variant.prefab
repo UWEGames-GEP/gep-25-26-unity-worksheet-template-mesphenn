@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3418770833510413323
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1438145935679918643, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 33f9315ef6e80fa448da3f08a36e6718, type: 2}
+    - target: {fileID: 1544277449428140599, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5812557715430474629, guid: 17ec7637ac593504ca70d07780984674, type: 3}
+    - target: {fileID: 2434772820146738881, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801792875103308785, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: m_Name
+      value: Short sword Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.036
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.291
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.863
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.42103988
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.36471865
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.62772334
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.54375476
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 81.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 112.297
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899091900169528418, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912573260458232164, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: item_data
+      value: 
+      objectReference: {fileID: 11400000, guid: 634dc018e09ca874eb805e2f7f0f204b, type: 2}
+    - target: {fileID: 8912573260458232164, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      propertyPath: item_name
+      value: Short sword
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2434772820146738881, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5801792875103308785, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2443419604704330147}
+  m_SourcePrefab: {fileID: 100100000, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+--- !u!1 &9220541983569117178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5801792875103308785, guid: de439c1803366024bac0eedf369a6aff, type: 3}
+  m_PrefabInstance: {fileID: 3418770833510413323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2443419604704330147
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9220541983569117178}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07320574, y: 0.54162, z: 0.04591217}
+  m_Center: {x: -0.000000029237519, y: 0.19620971, z: 0.00000025778843}

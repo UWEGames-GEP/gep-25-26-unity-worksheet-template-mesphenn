@@ -29,19 +29,20 @@ public class PlayerInventory : InventorySystem
         // checking if the object has an ItemObject component
         if (collisionItem != null)
         {
-            //ItemData data = collisionItem.ItemData;
-            //if (data != null)
-            //{
-            // adding the item to inventory structure
-            //AddItem(data.ItemName);
+            ItemData data = collisionItem.ItemData;
+            if (data != null)
+            {
+            //adding the item to inventory structure
+            AddItem(data);
             // playing sound effect
-            //IfItemAdded(data.ItemName);
+            IfItemAdded(collisionItem);
             // destroying the game object
             //Destroy(collisionItem.gameObject);
-            //}
-            AddItem(collisionItem);
-            IfItemAdded(collisionItem);
             collisionItem.gameObject.SetActive(false);
+            }
+
+            //AddItem(collisionItem);
+            //IfItemAdded(collisionItem);
         }
 
     }

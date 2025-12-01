@@ -8,6 +8,8 @@ public abstract class ItemData : ScriptableObject
     [SerializeField] private float price;
     [SerializeField] private float amount;
 
+    [SerializeField] public GameObject prefab_game_object;
+
     public string ItemName
     {
         get

@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     }
 
     public GameState state;
+    public GameObject inventoryUI;
     public bool has_changed_state = false;
 
     public void pausing()
@@ -45,23 +46,29 @@ public class GameManager : MonoBehaviour
     private void LateUpdate()
     {
         // checking if the game has been paused
-        if (has_changed_state == true)
-        {
+        //if (has_changed_state == true)
+        //{
             switch (state)
             {
                 case GameState.PAUSE:
                     Time.timeScale = 0.0f;
+                    inventoryUI.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
                     break;
                 case GameState.GAMEPLAY:
                     Time.timeScale = 1.0f;
+                    inventoryUI.SetActive(false);
+                    Cursor.lockState = CursorLockMode.Locked;
                     break;
                 default:
                     Time.timeScale = 1.0f;
+                    inventoryUI.SetActive(false);
+                    Cursor.lockState = CursorLockMode.Locked;
                     break;
             }
 
-            has_changed_state = false;
-        }
+            //has_changed_state = false;
+        //}
     }
 
 
