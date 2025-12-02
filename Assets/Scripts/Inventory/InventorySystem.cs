@@ -32,9 +32,26 @@ public abstract class InventorySystem : MonoBehaviour
     // function to remove item
     public virtual void RemoveItem(ItemData item_name)
     {
+        // Get the properties for where we want to spawn
+        Vector3 currentPosition = transform.position;
+        Vector3 forward = transform.forward;
+
+        Vector3 newPosition = currentPosition + forward;
+        newPosition += new Vector3(0, 1, 0);
+
+        Quaternion currentRotation = transform.rotation;
+        Quaternion newRotation = currentRotation * Quaternion.Euler(0, 0, 180);
+
+        // Instantiate a copy of the held item
+        GameObject newItem = Instantiate(item_name.prefab_game_object, newPosition, newRotation, worldItemsTransform);
+        newItem.SetActive(true);
+
+        // Clean up exisiting item
         items.Remove(item_name);
+        //Destroy(item.gameObject);
     }
 
+    // overload function
     public virtual void RemoveItem()
     {
         // Check that we can remove an item from our inventory
@@ -42,25 +59,16 @@ public abstract class InventorySystem : MonoBehaviour
         {
             // Store the item at the top of the list as a variable
             ItemData item = items[0];
+            RemoveItem(item);
 
-            // Get the properties for where we want to spawn
-            Vector3 currentPosition = transform.position;
-            Vector3 forward = transform.forward;
+        }
+    }
 
-            Vector3 newPosition = currentPosition + forward;
-            newPosition += new Vector3(0, 1, 0);
-
-            Quaternion currentRotation = transform.rotation;
-            Quaternion newRotation = currentRotation * Quaternion.Euler(0, 0, 180);
-
-            // Instantiate a copy of the held item
-            GameObject newItem = Instantiate(item.prefab_game_object, newPosition, newRotation, worldItemsTransform);
-            newItem.SetActive(true);
-
-            // Clean up exisiting item
-            items.Remove(item);
-            //Destroy(item.gameObject);
-
+    public virtual void RemoveItem(int i)
+    {
+        if (i < items.Count)
+        {
+            RemoveItem(items[i]);
         }
     }
 

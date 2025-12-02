@@ -11,6 +11,7 @@ public class InventoryUI : MonoBehaviour
     {
         RefreshInventory();
     }
+
     void RefreshInventory()
     {
         Debug.Log("Refresh Inventory UI");
@@ -36,5 +37,11 @@ public class InventoryUI : MonoBehaviour
                 uiButton.SetButton(item);
             }
         }
+    }
+
+    public void OnInventoryUIButton(int i)
+    {
+        inventory.RemoveItem(i);
+        RefreshInventory();
     }
 }
