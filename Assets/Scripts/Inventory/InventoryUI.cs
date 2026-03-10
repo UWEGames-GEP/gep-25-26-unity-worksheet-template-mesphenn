@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryUI : MonoBehaviour
 {
     public InventorySystem inventory;
-    public List<GameObject> inventoryUIButtons = new List<GameObject>();
+    public List<GameObject> inventoryUIButtons; // = new List<GameObject>()
 
     private void OnEnable()
     {
@@ -33,7 +33,7 @@ public class InventoryUI : MonoBehaviour
                 ItemData item = inventory.Items[i];
 
                 // Make the button visible and update
-                uiButton.gameObject.SetActive(true);
+                uiButton.GameObject.SetActive(true);
                 uiButton.SetButton(item);
             }
         }
