@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -17,23 +18,26 @@ public class InventoryUI : MonoBehaviour
         Debug.Log("Refresh Inventory UI");
 
         // Disable each inventory UI Button's game object
-        foreach (GameObject uiButton in inventoryUIButtons)
-        {
-            uiButton.SetActive(false);
-        }
+        //foreach (GameObject uiButton in inventoryUIButtons)
+        //{
+        //    uiButton.SetActive(false);
+        //}
 
+        Debug.Log("Pre-Loop");
         // Associate each inventory item with a Button in the UI menu
         for(int i = 0; i < inventory.Items.Count;i++)
         {
+            Debug.Log("Pre-Loop");
             // Check that the inventory item index is not greater than the number of buttons
-            if(i < inventoryUIButtons.Count)
+            if (i < inventoryUIButtons.Count)
             {
                 // Create a reference to the UI Button and Item
                 InventoryUIButton uiButton = inventoryUIButtons[i].GetComponent<InventoryUIButton>();
                 ItemData item = inventory.Items[i];
 
                 // Make the button visible and update
-                uiButton.GameObject.SetActive(true);
+                uiButton.gameObject.GetComponentInChildren<TextMeshPro>().SetActive(false);
+                uiButton.gameObject.SetActive(true);
                 uiButton.SetButton(item);
             }
         }
