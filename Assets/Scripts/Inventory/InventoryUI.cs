@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,7 +37,11 @@ public class InventoryUI : MonoBehaviour
                 ItemData item = inventory.Items[i];
 
                 // Make the button visible and update
-                uiButton.gameObject.GetComponentInChildren<TextMeshPro>().SetActive(false);
+                var temp = uiButton.gameObject.transform.Find("Inventory Button Text");
+                if (temp != null)
+                {
+                    temp.GetComponent<TextMeshProUGUI>().text = item.ItemName;
+                }
                 uiButton.gameObject.SetActive(true);
                 uiButton.SetButton(item);
             }
