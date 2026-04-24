@@ -11,14 +11,14 @@ public class PlayerInventory : InventorySystem
     void Start()
     {
         //gameManager = FindAnyObjectByType<GameManager>();
-        audioSource = GetComponent <AudioSource> ();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Sound effects
     protected override void IfItemAdded(ItemObject itemName)
     {
         audioSource.clip = pickUpClip;
-        audioSource.Play () ;
+        audioSource.Play();
     }
 
     public void OnControllerColliderHit(ControllerColliderHit hit)
@@ -32,13 +32,13 @@ public class PlayerInventory : InventorySystem
             ItemData data = collisionItem.ItemData;
             if (data != null)
             {
-            //adding the item to inventory structure
-            AddItem(data);
-            // playing sound effect
-            IfItemAdded(collisionItem);
-            // destroying the game object
-            //Destroy(collisionItem.gameObject);
-            collisionItem.gameObject.SetActive(false);
+                //adding the item to inventory structure
+                AddItem(data);
+                // playing sound effect
+                IfItemAdded(collisionItem);
+                // destroying the game object
+                Destroy(collisionItem.gameObject);
+                //collisionItem.gameObject.SetActive(false);
             }
 
             //AddItem(collisionItem);
@@ -48,4 +48,3 @@ public class PlayerInventory : InventorySystem
     }
 
 }
-  

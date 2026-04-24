@@ -16,19 +16,20 @@ public class InventoryUI : MonoBehaviour
 
     void RefreshInventory()
     {
-        Debug.Log("Refresh Inventory UI");
+        //Debug.Log("Refresh Inventory UI");
 
-        // Disable each inventory UI Button's game object
-        //foreach (GameObject uiButton in inventoryUIButtons)
-        //{
-        //    uiButton.SetActive(false);
-        //}
+        //Disable each inventory UI Button's game object
+        foreach (GameObject uiButton in inventoryUIButtons)
+        {
+            uiButton.SetActive(false);
+        }
 
-        Debug.Log("Pre-Loop");
+        //Debug.Log("Pre-Loop");
+        //Debug.Log(inventory.Items.Count);
         // Associate each inventory item with a Button in the UI menu
         for(int i = 0; i < inventory.Items.Count;i++)
         {
-            Debug.Log("Pre-Loop");
+            //Debug.Log("In-Loop");
             // Check that the inventory item index is not greater than the number of buttons
             if (i < inventoryUIButtons.Count)
             {
@@ -37,7 +38,7 @@ public class InventoryUI : MonoBehaviour
                 ItemData item = inventory.Items[i];
 
                 // Make the button visible and update
-                var temp = uiButton.gameObject.transform.Find("Inventory Button Text");
+                var temp = uiButton.transform.Find("Inventory Button text");
                 if (temp != null)
                 {
                     temp.GetComponent<TextMeshProUGUI>().text = item.ItemName;
