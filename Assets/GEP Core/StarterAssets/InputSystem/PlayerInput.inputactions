@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Pause",
+                    "name": "Inventory",
                     "type": "Button",
                     "id": "53d319da-399a-4684-9dcb-9e00c1bc2a6a",
                     "expectedControlType": "",
@@ -54,6 +54,15 @@
                     "name": "Remove Item",
                     "type": "Button",
                     "id": "f41fb3c1-6b3e-4549-aa1f-38f28e73f558",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "8cc0f88d-2f4a-49fc-b52a-1900e7e95b4f",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -240,11 +249,11 @@
                 {
                     "name": "",
                     "id": "8942f16b-1c90-4d44-adb7-9ce0f2cf351c",
-                    "path": "<Keyboard>/escape",
+                    "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
                     "groups": ";KeyboardMouse",
-                    "action": "Pause",
+                    "action": "Inventory",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -256,6 +265,17 @@
                     "processors": "",
                     "groups": ";KeyboardMouse",
                     "action": "Remove Item",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c7122b2-07fa-49ff-ad59-ccab12d6d47b",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";KeyboardMouse",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

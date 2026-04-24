@@ -7,11 +7,13 @@ public class GameManager : MonoBehaviour
     public enum GameState
     {
         GAMEPLAY,
-        PAUSE
+        PAUSE,
+        INVENTORY
     }
 
     public GameState state;
     public GameObject inventoryUI;
+    public GameObject pauseUI;
     public bool has_changed_state = false;
 
     public void pausing()
@@ -23,6 +25,32 @@ public class GameManager : MonoBehaviour
                 has_changed_state = true;
                 break;
             case GameState.PAUSE:
+                state = GameState.GAMEPLAY;
+                has_changed_state = true;
+                break;
+            case GameState.INVENTORY:
+                state = GameState.GAMEPLAY;
+                has_changed_state = true;
+                break;
+            default:
+                break;
+        }
+    }
+    public void resume()
+    {
+        state = GameState.GAMEPLAY;
+        has_changed_state = true;
+    }
+
+    public void openInventory()
+    {
+        switch (state)
+        {
+            case GameState.GAMEPLAY:
+                state = GameState.INVENTORY;
+                has_changed_state = true;
+                break;
+            case GameState.INVENTORY:
                 state = GameState.GAMEPLAY;
                 has_changed_state = true;
                 break;
@@ -52,15 +80,23 @@ public class GameManager : MonoBehaviour
             {
                 case GameState.PAUSE:
                     Time.timeScale = 0.0f;
-                    inventoryUI.SetActive(true);
-                    Cursor.lockState = CursorLockMode.None;
+                    pauseUI.SetActive(true);
+                    inventoryUI.SetActive(false);
+                Cursor.lockState = CursorLockMode.None;
                     break;
                 case GameState.GAMEPLAY:
                     Time.timeScale = 1.0f;
                     inventoryUI.SetActive(false);
-                    Cursor.lockState = CursorLockMode.Locked;
+                    pauseUI.SetActive(false);
+                Cursor.lockState = CursorLockMode.Locked;
                     break;
-                default:
+                case GameState.INVENTORY:
+                    Time.timeScale = 0.0f;
+                    inventoryUI.SetActive(true);
+                    pauseUI.SetActive(false);
+                Cursor.lockState = CursorLockMode.None;
+                    break;
+            default:
                     Time.timeScale = 1.0f;
                     inventoryUI.SetActive(false);
                     Cursor.lockState = CursorLockMode.Locked;

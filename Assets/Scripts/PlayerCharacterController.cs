@@ -21,4 +21,12 @@ public class PlayerCharacterController : ThirdPersonController
         }
     }
 
+    private void OnInventory(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            gameManager.openInventory();
+        }
+    }
+
 }
